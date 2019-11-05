@@ -27,7 +27,7 @@ const errorsReducer = (state = {}, action) => {
     switch(action.type) {
         case 'ADD_PERSONS_FAILED':
         case 'ADD_PERSON_TO_ARRAY_FAILED':
-        case 'ADD_SINGLE_PERSON':
+        case 'ADD_SINGLE_PERSON_FAILED':
             return {[action.type]: action.message };
         case 'REMOVE_ERRORS':
             return {};
