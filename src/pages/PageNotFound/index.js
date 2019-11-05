@@ -5,10 +5,10 @@ import { setTitle } from './../../helpers';
 
 function PageNotFound(props) {
     
-    setTitle('Page Not Found', props.pageTitle.title, props.dispatch);
+    setTitle('Page Not Found (404 error)', props.pageTitle.title, props.dispatch);
     
     return (
-        <h2>404 Error!</h2>
+        <h2>How did you get here?</h2>
     );
 }
 

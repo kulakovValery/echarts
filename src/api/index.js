@@ -9,7 +9,6 @@ export const getAllPersons = () => (
 export const getSinglePerson = (personId) => (
     axios.get(`${API_URL}/persons/${personId}`)
     .then(res => res.data)
-//    .catch(err => err)
 );
 
 export const postPerson = (personDtata) => (

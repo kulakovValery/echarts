@@ -17,15 +17,15 @@ class Echart extends React.Component {
         return (
             <ReactEcharts
                 option={{
-                        xAxis: {
-                            type: 'category',
-                            data: persons.map((item) => (`${item.name} ${item.surname}`))
-                        },
-                        yAxis: { type: 'value' },
-                        series: [{
-                            type: 'bar',
-                            data: persons.map((item) => (+item.age))
-                        }]
+                    xAxis: {
+                        type: 'category',
+                        data: persons.map((item) => (`${item.name} ${item.surname}`))
+                    },
+                    yAxis: { type: 'value' },
+                    series: [{
+                        type: 'bar',
+                        data: persons.map((item) => (+item.age))
+                    }]
                 }}
             />
         );
