@@ -28,7 +28,8 @@ const errorsReducer = (state = {}, action) => {
         case 'ADD_PERSONS_FAILED':
         case 'ADD_PERSON_TO_ARRAY_FAILED':
         case 'ADD_SINGLE_PERSON_FAILED':
-            return {[action.type]: action.message };
+            return {type: action.type,
+                    content: action.message };
         case 'REMOVE_ERRORS':
             return {};
         default:
@@ -48,7 +49,7 @@ const setPageTitleReducer = (state = {}, action) => {
 const reducers = combineReducers({
     persons: personsReducer,
     person: singlePersonReducer,
-    errors: errorsReducer,
+    error: errorsReducer,
     pageTitle: setPageTitleReducer,
     form: formReducer,
 });

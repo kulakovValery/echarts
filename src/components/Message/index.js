@@ -6,14 +6,15 @@ import './style.css';
 const component = 'error-message';
 
 function Message(props) {
-    const { errors } = props;
-    const errorExist = (Object.keys(errors).length) ? true : false;
+
+    const { error } = props;
+    
     return (
         <>
-            {errorExist && (
+            {error.content && (
                 <div className={`${component}`}>
                     <h4 className={`${component}__heading`}>Error:</h4>
-                    <p className={`${component}__message`}>{errors[Object.keys(errors)[0]]}</p>
+                    <p className={`${component}__message`}>{error.content.message}</p>
                 </div>
             )}
         </>
@@ -21,7 +22,7 @@ function Message(props) {
 }
 
 const mapStateToProps = state => (
-    { errors: state.errors }
+    { error: state.error }
 );
 
 export default connect(mapStateToProps)(Message);

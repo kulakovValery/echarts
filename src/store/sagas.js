@@ -7,7 +7,7 @@ function* getPersonsSaga(action) {
         yield put({type: "ADD_PERSONS", payload: persons});
         yield put({type: "REMOVE_ERRORS"});
     } catch (e) {
-        yield put({type: "ADD_PERSONS_FAILED", message: e.message});
+        yield put({type: "ADD_PERSONS_FAILED", message: e});
     }
 }
 
@@ -17,7 +17,7 @@ function* getSinglePersonSaga(action) {
         yield put({type: "ADD_SINGLE_PERSON", payload: person});
         yield put({type: "REMOVE_ERRORS"});
     } catch (e) {
-        yield put({type: "ADD_SINGLE_PERSON_FAILED", message: e.message});
+        yield put({type: "ADD_SINGLE_PERSON_FAILED", message: e});
     }
 }
 
@@ -27,7 +27,7 @@ function* postPersonSaga(action) {
         yield put({type: "ADD_PERSON_TO_ARRAY", payload: person});
         yield put({type: "REMOVE_ERRORS"});
     } catch (e) {
-        yield put({type: "ADD_PERSON_TO_ARRAY_FAILED", message: e.message});
+        yield put({type: "ADD_PERSON_TO_ARRAY_FAILED", message: e});
     }
 }
 
