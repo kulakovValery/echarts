@@ -1,0 +1,36 @@
+.document-footer {
+    display: flex;
+    color: #ddd;
+    padding: 36px;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(58, 70, 82, 0.97), rgba(58, 70, 82, 0.97)), url('back.png');
+    background-position: center center, center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.document-footer__section {
+    flex: 0 0 33.33%;
+    padding: 48px 24px;
+}
+
+.document-footer__heading {
+    color: #ebeff2;
+    border-bottom: 1px solid;
+}
+
+.document-footer
+.nav__item a {
+    display: block;
+    color: #ddd;
+}
+
+.document-footer
+.nav__item a:hover {
+    color: #a5a9ac;
+}
+
+.document-footer
+.nav__item a.active {
+    color: #c62d4d;
+}

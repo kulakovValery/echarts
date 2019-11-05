@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import PageHome from './pages/PageHome';
+import PageViewList from './pages/PageViewList';
+import PageViewSingle from './pages/PageViewSingle';
+import PageViewEcharts from './pages/PageViewEcharts';
+import PageAbout from './pages/PageAbout';
+import PageNotFound from './pages/PageNotFound';
+
+import Header from './components/layouts/Header';
+import NavBar from './components/layouts/NavBar';
+import Footer from './components/layouts/Footer';
+import Message from './components/Message';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <NavBar />
+            <div className='main-content'>
+                <Header />
+                <main className='document-main'>
+                    <Switch>
+                        <Route exact path='/' component={PageHome} />
+                        <Route exact path='/list' component={PageViewList} />
+                        <Route path='/list/:id' component={PageViewSingle} />
+                        <Route path='/echarts' component={PageViewEcharts} />
+                        <Route path='/about' component={PageAbout} />
+                        <Route path='*' component={PageNotFound} />
+                    </Switch>
+                </main>
+                <Footer />
+            </div>
+            <Message />
+        </Router>
+    );
 }
 
 export default App;
