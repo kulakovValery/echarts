@@ -50,5 +50,7 @@ button:not([disabled]):hover { border: 1px solid #c62d4d; }
 .adding-form__message {
     padding: 12px 0;
     text-align: right;
-    color: red;
+    color: #c62d4d;
+    font-size: 0.7rem;
+    padding-top: 0;
 }
