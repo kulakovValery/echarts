@@ -20,6 +20,10 @@
     background: rgb(39,50,56,0);
 }
 
+.img-galery__container:hover .img-galery__title {
+    background: rgba(198,45,77,0.8);
+}
+
 .img-galery__img {
     width: 100%;
     height: 100%;
@@ -31,5 +35,54 @@
     top: 80%;
     color: #eff3f6;
     padding: 0 1vw;
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding-left: 48px;
+}
+
+.list__list-item:before {
+    content: "\25CF";
+    display: inline-block;
+    color: #d6dde5;
+    transition: 0.5s;
+    transform: translate(-10px, 0);
+    text-shadow: 0px 0px 4px #404b57;
+}
+
+ .list__list-item:hover:before { color: #404b57; }
+
+.unimportant-text {
+    background: #d6dde5;
+    background-image: url(php-logo.png);
+    background-repeat: no-repeat;
+    background-position: 50% -4px;
+    padding: 48px;
+    position: relative;
+    text-align: center;
+    color: #404b57;
+}
+
+.unimportant-text:before,
+.unimportant-text:after {
+    position: absolute;
+    height: 2px;
+    left: 40px;
+    right: 40px;
+    background:
+        linear-gradient(to right, #404b57 45%, transparent 45%, transparent),
+        linear-gradient(to right, transparent, transparent 55%, #404b57 55%);
+}
+
+.unimportant-text:before {
+    content: "";
+    top: 18px;
+}
+
+.unimportant-text:after {
+    content: "";
+    bottom: 18px;
 }

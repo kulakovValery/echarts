@@ -9,19 +9,29 @@ class AddingForm extends React.Component {
     
     constructor(props) {
         super(props);
-        this.onSubmit = this.onSubmit.bind(this);
         this.state = {};
+        this.onSubmit = this.onSubmit.bind(this);
     }
     
     onSubmit(values) {
-        if (values.name && values.surname && values.age && !isNaN(values.age)) {
-            this.setState({valid: true, message: 'Data is being sent...'});
-            this.props.dispatch({
-                type: 'POST_PERSON',
-                payload: values
-            });
+        const { reset } = this.props;
+        
+        if (values.name &&
+            values.surname &&
+            values.age &&
+            !isNaN(values.age)) {
+            if (values.age > 0 && values.age <100) {
+                this.setState({valid: true, message: 'Data is being sent...'});
+                this.props.dispatch({
+                    type: 'POST_PERSON',
+                    payload: values
+                });
+                reset();
+            } else {
+                this.setState({valid: false, message: 'Incorrect age!'});
+            }
         } else {
-            this.setState({valid: false, message: 'All fields must be required!'});
+            this.setState({valid: false, message: 'All fields required!'});
         }
     }
     
@@ -58,4 +68,4 @@ class AddingForm extends React.Component {
 
 export default reduxForm ({
     form: 'adding_person'
-}) (AddingForm);
+})(AddingForm);

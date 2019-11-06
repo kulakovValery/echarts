@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import {reducer as formReducer} from 'redux-form';
+import { reducer as formReducer } from 'redux-form';
 
 const personsReducer = (state = [], action) => {
     switch(action.type) {
@@ -51,8 +51,7 @@ const reducers = combineReducers({
     person: singlePersonReducer,
     error: errorsReducer,
     pageTitle: setPageTitleReducer,
-    form: formReducer,
+    form: formReducer
 });
 
 export default reducers;
-

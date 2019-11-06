@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
 
 *,
 *:before,
@@ -14,7 +14,7 @@ html,
 body {
     height: 100%;
     background: #eff3f6;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -22,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Nunito', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Comfortaa', cursive; }
 
 h1, h2 {
     text-align: center;
@@ -51,4 +51,15 @@ a {
     font-size: 1.1rem;
 }
 
+mark {
+    background: rgba(198,45,77,0.1);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 0 10px;
+    box-shadow: 0 0 2px 0px #c62d4d;
+}
 p, ol, ul { margin: 18px 0; }
+
+section, article {
+    margin: 64px 0;
+}
